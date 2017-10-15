@@ -4,6 +4,8 @@ tinyurlserv provides interface to  :
 1) Create tiny urls from long / actual URLs
 2) Retrieve long / actual URLs for given tiny URL
 
+Screen shots can be found in doc folder of this repo.
+
 ## Use Case
 User enters URL in /index.jsp, which then comes to service [Java backend] to be shortify.
 Once big URL gets converts into short URL, page tinyurl.jso renders tiny url value with link to navigate.
