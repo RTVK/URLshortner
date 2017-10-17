@@ -14,7 +14,16 @@ If user clicks on navigate link or enters short url in address bar, service rero
 
 ## Base62 equivalent 
 
-Service converts long URLs to short URLs using base 62 [A-Z, a-z, 0-9] codes.
+Service converts long URLs to short URLs using base 62 [A-Z, a-z, 0-9] codes. Service persists key value in DB and cache where tiny url is key and long url is value.
+
+## Assumptions
+
+# What if multiple users requests to get tiny url for same long url ?
+Same tiny url will be generated using base 62.
+# How much time system will keep tiny url ?
+Application stores value in DB, so this can be retrieved anytime, there is no expiry.
+In case, it is required a separate scheduled job can be performed.
+
 
 ## Performance
 Before any encode / DB operation, service looks for value in ehcache. Currently, Ehcache stores values for 24 hours, which could
