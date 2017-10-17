@@ -28,7 +28,7 @@ In case, it is required a separate scheduled job can be performed.
 ## Performance
 Before any encode / DB operation, service looks for value in ehcache. Currently, Ehcache stores values for 24 hours, which could
 be increased.
-Currently, I have in=mplemented, in memory cache but memcached or cohrence can be used.
+Currently, I have inmplemented in memory cache but scalable alternative like memcached or cohrence can be used.
 In case cache call fails, service stores all tiny url and long url combination in in-memory H2 db.
 
 ### Technology Stack
